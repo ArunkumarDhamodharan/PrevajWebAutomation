@@ -14,9 +14,9 @@ public class TC_02StepDefinitionClass extends BaseClass {
 	public void iClickOnEachSocialMediaLinkInTheFooter() {
 
 		try {
-			
+
 			scrollToElement(a.getPrivacyPolicy());
-			
+
 			setMainWindowHandle();
 
 			WebElement fbLink = waitForElementToBeClickable(a.getFbLink(), 50);
@@ -65,7 +65,7 @@ public class TC_02StepDefinitionClass extends BaseClass {
 	public void theNewsletterSectionShouldBeDisplayedInTheFooterArea() {
 
 		scrollToElement(a.getPrivacyPolicy());
-		
+
 		WebElement newsEmail = waitForElementToBeVisible(a.getNewsEmail(), 20);
 		newsEmail.isDisplayed();
 
@@ -73,7 +73,7 @@ public class TC_02StepDefinitionClass extends BaseClass {
 
 	@When("I enter a valid email ID in the Newsletter section and click on the Subscribe button")
 	public void iEnterAValidEmailIDInTheNewsletterSectionAndClickOnTheSubscribeButton() {
-		
+
 		scrollToElement(a.getPrivacyPolicy());
 
 		WebElement newsEmail = waitForElementToBeVisible(a.getNewsEmail(), 20);
@@ -92,26 +92,21 @@ public class TC_02StepDefinitionClass extends BaseClass {
 
 	@When("I click on the Privacy Policy link")
 	public void iClickOnThePrivacyPolicyLink() {
-		
+
 		scrollToElement(a.getPrivacyPolicy());
-		
-		setMainWindowHandle();
 
 		WebElement privacy = waitForElementToBeClickable(a.getPrivacyPolicy(), 40);
 		privacy.click();
-		
-		switchToWindowByUrl("https://prevaj.com/prevaj-privacy-policy/");
 
 		WebElement privacyPage = waitForElementToBeVisible(a.getPrivacyPage(), 40);
 		privacyPage.isDisplayed();
 
-		switchBackToMainWindow();
-
+		backwardButton();
 	}
 
 	@Then("I should see the Privacy Policy page")
 	public void iShouldSeeThePrivacyPolicyPage() {
-		
+
 	}
 
 }

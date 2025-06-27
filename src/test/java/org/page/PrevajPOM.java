@@ -98,7 +98,7 @@ public class PrevajPOM extends BaseClass {
 		return bookaMeetingButton;
 	}
 
-	@FindBy(xpath = "(//iframe[@class='lazy entered loaded'])[1]")
+	@FindBy(xpath = "//*[@id=\"custom-popup\"]/iframe")
 	private WebElement iframeBookMeeting;
 
 	public WebElement getIframeBookMeeting() {

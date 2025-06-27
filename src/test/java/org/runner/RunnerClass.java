@@ -9,12 +9,12 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "C:\\Users\\Arun\\eclipse-workspace\\PrevajWebAutomation\\src\\test\\resources\\Feature\\prevaj.feature",
+@CucumberOptions(features = "C:\\Users\\arunk\\git\\PrevajWebAutomation\\src\\test\\resources\\Feature\\prevaj.feature",
 glue = {"org.step","org.hooks"}, 
 monochrome = true, 
 dryRun = false, 
 snippets = SnippetType.CAMELCASE,
-tags="@SocialMedia01",
+tags="@GetAConsult01",
 plugin = {
 		"html:target\\HTMLReport", "junit:target\\xmlReport.xml", "json:target\\JsonReport.json" })
 

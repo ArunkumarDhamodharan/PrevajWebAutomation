@@ -1,5 +1,7 @@
 package org.step;
 
+import java.awt.AWTException;
+
 import org.base.BaseClass;
 import org.openqa.selenium.WebElement;
 import org.page.PrevajPOM;
@@ -136,13 +138,15 @@ public class TC_01StepDefinitionClass extends BaseClass {
 
 	@When("I click on the Call Us Now button")
 	public void iClickOnTheCallUsNowButton() {
+		
 		WebElement callUsNowButton = waitForElementToBeClickable(a.getCallUsNowButton(), 30);
-
 		callUsNowButton.click();
 	}
 
 	@Then("I should see a call popup alert")
-	public void iShouldSeeACallPopupAlert() {
+	public void iShouldSeeACallPopupAlert() throws AWTException {
+		
+		enterPress();
 
 	}
 }
